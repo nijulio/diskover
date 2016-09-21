@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Turista</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Mail</th>
+      <th>ContraseÇña</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turista.each do |turistum| %>
+      <tr>
+        <td><%= turistum.nombre %></td>
+        <td><%= turistum.mail %></td>
+        <td><%= turistum.contraseÇña %></td>
+        <td><%= link_to 'Show', turistum %></td>
+        <td><%= link_to 'Edit', edit_turistum_path(turistum) %></td>
+        <td><%= link_to 'Destroy', turistum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Turistum', new_turistum_path %>

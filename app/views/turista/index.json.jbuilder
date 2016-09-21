@@ -1,0 +1,1 @@
+json.array! @turista, partial: 'turista/turistum', as: :turistum

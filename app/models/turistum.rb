@@ -1,0 +1,2 @@
+class Turistum < ApplicationRecord
+end

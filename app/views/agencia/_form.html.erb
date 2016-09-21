@@ -1,0 +1,32 @@
+<%= form_for(agencium) do |f| %>
+  <% if agencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agencium.errors.count, "error") %> prohibited this agencium from being saved:</h2>
+
+      <ul>
+      <% agencium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mail %>
+    <%= f.text_field :mail %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contraseÇña %>
+    <%= f.text_field :contraseÇña %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

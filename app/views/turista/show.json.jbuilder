@@ -1,0 +1,1 @@
+json.partial! "turista/turistum", turistum: @turistum
